@@ -1,10 +1,10 @@
-;;; numwin.el --- generalized window numbering for Emacs
+;;; numwin.el --- generalized window numbering for Emacs   -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2009, 2010, 2011, 2012 Paul M. Rodriguez
 
 ;; Author: Paul M. Rodriguez <pmr@ruricolist.com>
 ;; Created: 2010-09-12
-;; Version: 0.4
+;; Version: 0.4.1
 ;; Keywords: convenience
 
 ;; This file is not part of GNU Emacs.
@@ -39,6 +39,12 @@
 ;;; Code:
 
 (eval-when-compile (require 'cl))
+
+(defgroup numwin nil
+  "Generalized window numbering for Emacs."
+  :tag "Numwin"
+  :prefix "numwin-"
+  :group 'convenience)
 
 (defvar numwin-window-list nil
   "List of windows from perspective of selected window.")
